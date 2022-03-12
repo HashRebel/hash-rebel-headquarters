@@ -1,4 +1,5 @@
 # Hash Rebel Headquarters
+
 This is intended to be a sandbox for the Hash Rebel web page.
 
 ## Getting Started
