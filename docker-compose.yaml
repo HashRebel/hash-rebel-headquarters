@@ -1,8 +1,17 @@
 version: '3'
 services:
   strapi:
-    image: strapi/strapi
+    image: strapi/strapi:latest
     volumes:
-      - ./app:/srv/app
+      - ./cms-app:/srv/app
     ports:
       - '1337:1337'
+  ipfs_host:
+    image: ipfs/go-ipfs:latest
+    volumes:
+      - $ipfs_staging:/export
+      - $ipfs_data:/data/ipfs
+    ports:
+      - '4002:4001'
+      - '5002:5001'
+      - '8081:8080'
